@@ -1,0 +1,42 @@
+body {
+    font-family: 'Century Gothic';
+    font-size: 20px;
+    text-align: center;
+}
+a {
+    color: #04AA6D;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 15px;
+    text-align: center;
+}
+b {
+    letter-spacing: 1px;
+}
+form {
+    vertical-align: middle;
+    margin: 5% 0;
+}
+input[type=number] {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+input[type=focus]:focus {
+    border: 3px solid #555;
+}
+input[type=submit] {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 10%;
+  font-weight: bold;
+}
+.result {
+    margin: 1% 1% 1% 1%;
+}

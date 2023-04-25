@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Forks calculator</title>
+</head>
+<body>
+<a href="https://likebets.com/en/articles/betting-forks">What betting forks is?</a>
+{% if result %}
+<div class="result">
+<b>First outcome:</b>
+<li>Bet - {{ result['distribution'][0] }}</li>
+<li>Possible profit - {{ result['profits'][0][0] }} ({{ result['profits'][0][1] }}%)</li>
+</div>
+<div class="result">
+<b>Second outcome:</b>
+<li>Bet - {{ result['distribution'][1] }}</li>
+<li>Possible profit - {{ result['profits'][1][0] }} ({{ result['profits'][1][1] }}%)</li>
+</div>
+{% endif %}
+<form action="/" method="POST">
+    <p><input type="number" name="amount" placeholder="Total Finances"></p>
+    <input type="number" step="0.01" name="odd1" placeholder="Odd">
+    <input type="number" step="0.01" name="odd2" placeholder="Odd">
+    <p><input type="checkbox" name="rounding" id="rounding"><label for="rounding">Round Up</label></p>
+    <p><input type="submit" value="Calculate"></p>
+</form>
+</body>
+</html>
