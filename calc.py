@@ -10,7 +10,7 @@ class Calculation:
         return __class__.get_probability(*odds) < 1
 
     @staticmethod
-    def distribution(amount: float, *odds: float, rounding: int=2, probability: float=None):
+    def distribution(amount: float, *odds: float, rounding: int=2, probability: float=None) -> list:
         if not probability:
             probability = __class__.get_probability(*odds)
         return [round(((1/x/probability) * amount), rounding) for x in odds if x is not None]
